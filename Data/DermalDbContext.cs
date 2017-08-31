@@ -1,13 +1,17 @@
+using dermal.api.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
-public class DermalDbContext : DbContext
+namespace dermal.api.Data
 {
-    public DermalDbContext(DbContextOptions<DermalDbContext> options) : base(options)
+    public class DermalDbContext : IdentityDbContext<ApplicationUser>
     {
-        
-    }
+        public DermalDbContext(DbContextOptions<DermalDbContext> options) : base(options)
+        {
 
-    public DbSet<ReferralRequest> ReferralRequests { get; set; }
-    public DbSet<Patient> Patients { get; set; }
-    public DbSet<Practitioner> Practitioners { get; set; }
+        }
+
+        public DbSet<ReferralRequest> ReferralRequests { get; set; }
+        public DbSet<Patient> Patients { get; set; }
+        public DbSet<Practitioner> Practitioners { get; set; }
+    }
 }
