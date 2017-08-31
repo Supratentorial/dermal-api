@@ -4,8 +4,7 @@ public class Encounter{
     public string Class { get; set; }
     //E.g. annual checkup
     public string Type { get; set; }
-    
-    //Base on what referral request
+    //Based on what referral request
     public ReferralRequest BasedOn { get; set; }
     public int ReferralRequestId { get; set; }
 

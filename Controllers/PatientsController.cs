@@ -1,7 +1,11 @@
-public class PatientsController{
-    
-public PatientsController()
+using Microsoft.AspNetCore.Mvc;
+
+public class PatientsController : Controller
 {
-    
-}
+
+    public PatientsController()
+    {
+
+    }
+
 }
