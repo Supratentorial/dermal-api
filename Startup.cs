@@ -15,28 +15,19 @@ namespace dermal.api
 
         public IConfiguration Configuration { get; }
 
-        public Startup(IHostingEnvironment env)
+        public Startup(IConfiguration configuration)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-                .AddEnvironmentVariables();
-
-            builder.AddEnvironmentVariables();
-
-            Configuration = builder.Build();
+            Configuration = configuration;
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddOptions();
+            services.AddMvc();
 
             services.AddCors();
 
-            services.AddEntityFrameworkSqlServer()
-                .AddDbContext<DermalDbContext>(options =>
+            services.AddDbContext<DermalDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DermalDb"));
                 options.UseOpenIddict();
@@ -58,15 +49,14 @@ namespace dermal.api
                 options.AddEntityFrameworkCoreStores<DermalDbContext>();
                 options.AddMvcBinders();
                 options.EnableTokenEndpoint("/connect/token");
-                options.EnableLogoutEndpoint("/connect/logout");
                 options.AllowPasswordFlow();
                 options.AllowRefreshTokenFlow();
                 //During development disable the HTTPS requirement
                 options.DisableHttpsRequirement();
             });
 
-            services.AddMvc();
-
+            services.AddAuthentication()
+                .AddOAuthValidation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -77,14 +67,13 @@ namespace dermal.api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
-
-            
 
             app.UseAuthentication();
 
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+           
             app.UseMvc();
         }
     }
