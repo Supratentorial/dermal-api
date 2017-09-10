@@ -2,6 +2,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using dermal.api.Data;
+using Microsoft.AspNetCore.Authorization;
+using AspNet.Security.OAuth.Validation;
 
 namespace dermal.api.Controllers
 {
@@ -15,6 +17,7 @@ namespace dermal.api.Controllers
             this._context = context;
         }
 
+        [Authorize(AuthenticationSchemes = OAuthValidationDefaults.AuthenticationScheme)]
         [HttpGet]
         public async Task<IActionResult> GetReferralRequests(bool? includeMedia)
         {

@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "AspNet.Security.OAuth.Validation/2.0.0-preview1-0285": {
+      "AspNet.Security.OAuth.Validation/2.0.0-rc1-0286": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication": "2.0.0",
@@ -15,10 +15,10 @@
           "lib/netstandard2.0/AspNet.Security.OAuth.Validation.dll": {}
         }
       },
-      "AspNet.Security.OpenIdConnect.Extensions/2.0.0-preview1-1307": {
+      "AspNet.Security.OpenIdConnect.Extensions/2.0.0-rc1-1310": {
         "type": "package",
         "dependencies": {
-          "AspNet.Security.OpenIdConnect.Primitives": "2.0.0-preview1-1307",
+          "AspNet.Security.OpenIdConnect.Primitives": "2.0.0-rc1-1310",
           "Microsoft.AspNetCore.Authentication": "2.0.0"
         },
         "compile": {
@@ -28,7 +28,7 @@
           "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Extensions.dll": {}
         }
       },
-      "AspNet.Security.OpenIdConnect.Primitives/2.0.0-preview1-1307": {
+      "AspNet.Security.OpenIdConnect.Primitives/2.0.0-rc1-1310": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Primitives": "2.0.0",
@@ -41,10 +41,10 @@
           "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Primitives.dll": {}
         }
       },
-      "AspNet.Security.OpenIdConnect.Server/2.0.0-preview1-1307": {
+      "AspNet.Security.OpenIdConnect.Server/2.0.0-rc1-1310": {
         "type": "package",
         "dependencies": {
-          "AspNet.Security.OpenIdConnect.Extensions": "2.0.0-preview1-1307",
+          "AspNet.Security.OpenIdConnect.Extensions": "2.0.0-rc1-1310",
           "Microsoft.AspNetCore.Authentication": "2.0.0",
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "2.1.4"
@@ -2984,14 +2984,14 @@
           "lib/netstandard1.3/NuGet.Frameworks.dll": {}
         }
       },
-      "OpenIddict/2.0.0-preview1-0649": {
+      "OpenIddict/2.0.0-rc1-0663": {
         "type": "package",
         "dependencies": {
-          "AspNet.Security.OpenIdConnect.Server": "2.0.0-preview1-1307",
+          "AspNet.Security.OpenIdConnect.Server": "2.0.0-rc1-1310",
           "Microsoft.AspNetCore.Diagnostics.Abstractions": "2.0.0",
           "Microsoft.Extensions.Caching.Abstractions": "2.0.0",
           "Newtonsoft.Json.Bson": "1.0.1",
-          "OpenIddict.Core": "2.0.0-preview1-0649"
+          "OpenIddict.Core": "2.0.0-rc1-0663"
         },
         "compile": {
           "lib/netstandard2.0/OpenIddict.dll": {}
@@ -3000,15 +3000,15 @@
           "lib/netstandard2.0/OpenIddict.dll": {}
         }
       },
-      "OpenIddict.Core/2.0.0-preview1-0649": {
+      "OpenIddict.Core/2.0.0-rc1-0663": {
         "type": "package",
         "dependencies": {
-          "AspNet.Security.OpenIdConnect.Primitives": "2.0.0-preview1-1307",
+          "AspNet.Security.OpenIdConnect.Primitives": "2.0.0-rc1-1310",
           "CryptoHelper": "3.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
           "Microsoft.Extensions.Options": "2.0.0",
-          "OpenIddict.Models": "2.0.0-preview1-0649"
+          "OpenIddict.Models": "2.0.0-rc1-0663"
         },
         "compile": {
           "lib/netstandard2.0/OpenIddict.Core.dll": {}
@@ -3017,11 +3017,11 @@
           "lib/netstandard2.0/OpenIddict.Core.dll": {}
         }
       },
-      "OpenIddict.EntityFrameworkCore/2.0.0-preview1-0649": {
+      "OpenIddict.EntityFrameworkCore/2.0.0-rc1-0663": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "2.0.0",
-          "OpenIddict.Core": "2.0.0-preview1-0649"
+          "OpenIddict.Core": "2.0.0-rc1-0663"
         },
         "compile": {
           "lib/netstandard2.0/OpenIddict.EntityFrameworkCore.dll": {}
@@ -3030,7 +3030,7 @@
           "lib/netstandard2.0/OpenIddict.EntityFrameworkCore.dll": {}
         }
       },
-      "OpenIddict.Models/2.0.0-preview1-0649": {
+      "OpenIddict.Models/2.0.0-rc1-0663": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "2.0.0"
@@ -3042,12 +3042,12 @@
           "lib/netstandard1.0/OpenIddict.Models.dll": {}
         }
       },
-      "OpenIddict.Mvc/2.0.0-preview1-0649": {
+      "OpenIddict.Mvc/2.0.0-rc1-0663": {
         "type": "package",
         "dependencies": {
-          "AspNet.Security.OpenIdConnect.Server": "2.0.0-preview1-1307",
+          "AspNet.Security.OpenIdConnect.Server": "2.0.0-rc1-1310",
           "Microsoft.AspNetCore.Mvc.Core": "2.0.0",
-          "OpenIddict.Core": "2.0.0-preview1-0649"
+          "OpenIddict.Core": "2.0.0-rc1-0663"
         },
         "compile": {
           "lib/netstandard2.0/OpenIddict.Mvc.dll": {}
@@ -5304,45 +5304,45 @@
     }
   },
   "libraries": {
-    "AspNet.Security.OAuth.Validation/2.0.0-preview1-0285": {
-      "sha512": "vSqFh1+RRmXo32zjbSuE6RdlZ7hFXzLqTpPmL4VaiPUqf2qLJSLX1G8iYga8wC3gzEPHFFbe11SewBwJyUXp7Q==",
+    "AspNet.Security.OAuth.Validation/2.0.0-rc1-0286": {
+      "sha512": "VjmfgdMqt1mHtk+XVIxnm1vWPbO4wxnfmKpfmccasqHfsj48/9vXw7tAH7Lc7sYfLCUKhKsSBD9BN/wU6ty1QA==",
       "type": "package",
-      "path": "aspnet.security.oauth.validation/2.0.0-preview1-0285",
+      "path": "aspnet.security.oauth.validation/2.0.0-rc1-0286",
       "files": [
-        "aspnet.security.oauth.validation.2.0.0-preview1-0285.nupkg.sha512",
+        "aspnet.security.oauth.validation.2.0.0-rc1-0286.nupkg.sha512",
         "aspnet.security.oauth.validation.nuspec",
         "lib/netstandard2.0/AspNet.Security.OAuth.Validation.dll",
         "lib/netstandard2.0/AspNet.Security.OAuth.Validation.xml"
       ]
     },
-    "AspNet.Security.OpenIdConnect.Extensions/2.0.0-preview1-1307": {
-      "sha512": "xI9koYzLjLpqQ53R17b+pw2aTA7MR1CO5l8rK49mPBnbXL1HiemdGCG79CHgIvTIUM8A3kWF+ohCPIJv+mvj+w==",
+    "AspNet.Security.OpenIdConnect.Extensions/2.0.0-rc1-1310": {
+      "sha512": "ld0AhhfLZixeueX98fg/JzdhQs5l3EpXW6GOrc1MViJKOQNeKJQke8lndFZfNarRInbrvlE0DvEAVDtufTVaEw==",
       "type": "package",
-      "path": "aspnet.security.openidconnect.extensions/2.0.0-preview1-1307",
+      "path": "aspnet.security.openidconnect.extensions/2.0.0-rc1-1310",
       "files": [
-        "aspnet.security.openidconnect.extensions.2.0.0-preview1-1307.nupkg.sha512",
+        "aspnet.security.openidconnect.extensions.2.0.0-rc1-1310.nupkg.sha512",
         "aspnet.security.openidconnect.extensions.nuspec",
         "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Extensions.dll",
         "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Extensions.xml"
       ]
     },
-    "AspNet.Security.OpenIdConnect.Primitives/2.0.0-preview1-1307": {
-      "sha512": "OQVpXqxDS+07rlwTwpcJOr/plHQNfNNw5mhvtvxAFYsFYEsyQ3YhG5HMUdKjvcoD+2BLw66BmHtl4CcnUADuyA==",
+    "AspNet.Security.OpenIdConnect.Primitives/2.0.0-rc1-1310": {
+      "sha512": "Uf0dEb1G8T3P87mBkU83ZD0OGa2fdhBakATl9uq5oRRWUu61/waZ0bnHp25YglJb8KCkt0NhvPxqXEGYE2TeBA==",
       "type": "package",
-      "path": "aspnet.security.openidconnect.primitives/2.0.0-preview1-1307",
+      "path": "aspnet.security.openidconnect.primitives/2.0.0-rc1-1310",
       "files": [
-        "aspnet.security.openidconnect.primitives.2.0.0-preview1-1307.nupkg.sha512",
+        "aspnet.security.openidconnect.primitives.2.0.0-rc1-1310.nupkg.sha512",
         "aspnet.security.openidconnect.primitives.nuspec",
         "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Primitives.dll",
         "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Primitives.xml"
       ]
     },
-    "AspNet.Security.OpenIdConnect.Server/2.0.0-preview1-1307": {
-      "sha512": "T0B5NRcqRkOq9kGucxUQjmZbrX5Ru4ieykEyll8+H41cEE/ecI8uu6DZ/t2qTLF0Ier5Aj249hHJSGbOT+kJnA==",
+    "AspNet.Security.OpenIdConnect.Server/2.0.0-rc1-1310": {
+      "sha512": "l2JFrARKKxAZgeNd4vxbCNeSgDqToQprFc8rBf/WAYb6hCIJjhRv0kEmQWE4yyg/H9a9BSkbFSy983faF/RxMA==",
       "type": "package",
-      "path": "aspnet.security.openidconnect.server/2.0.0-preview1-1307",
+      "path": "aspnet.security.openidconnect.server/2.0.0-rc1-1310",
       "files": [
-        "aspnet.security.openidconnect.server.2.0.0-preview1-1307.nupkg.sha512",
+        "aspnet.security.openidconnect.server.2.0.0-rc1-1310.nupkg.sha512",
         "aspnet.security.openidconnect.server.nuspec",
         "lib/net47/AspNet.Security.OpenIdConnect.Server.dll",
         "lib/net47/AspNet.Security.OpenIdConnect.Server.xml",
@@ -8406,58 +8406,58 @@
         "nuget.frameworks.nuspec"
       ]
     },
-    "OpenIddict/2.0.0-preview1-0649": {
-      "sha512": "2F0+kDQKWuRu7zk8DuemBuMHiKTJCX9D2wMkzoBTeE02JTRIrMZIXSpd0R/nsiFce7+RGL1ZrKBxg0Vd8GLQqw==",
+    "OpenIddict/2.0.0-rc1-0663": {
+      "sha512": "IMd118HEcfNgkZOzXd5c/HJWO8nPE6Blgx+2IhsZFX17njfGaElZhLGUgkK0h/fIrlmuhZv0QXRyqipZntrZhw==",
       "type": "package",
-      "path": "openiddict/2.0.0-preview1-0649",
+      "path": "openiddict/2.0.0-rc1-0663",
       "files": [
         "lib/netstandard2.0/OpenIddict.dll",
         "lib/netstandard2.0/OpenIddict.xml",
-        "openiddict.2.0.0-preview1-0649.nupkg.sha512",
+        "openiddict.2.0.0-rc1-0663.nupkg.sha512",
         "openiddict.nuspec"
       ]
     },
-    "OpenIddict.Core/2.0.0-preview1-0649": {
-      "sha512": "oumavwUJLyxG1M5yxPzkl/mKJfMCYUTCNW2L2fBS49+ty7nlG62/PqdSwwE7VlD3jUSo0sVbgdJ18bXbhZEdBQ==",
+    "OpenIddict.Core/2.0.0-rc1-0663": {
+      "sha512": "pGnagb1S2mCpcsWXKFgR+SNXSaQu2xlSUT8HhMxzU078gtvAe/ip0nNm0S9DMC8ER4l3XmVvwNSoe39E9P0l1A==",
       "type": "package",
-      "path": "openiddict.core/2.0.0-preview1-0649",
+      "path": "openiddict.core/2.0.0-rc1-0663",
       "files": [
         "lib/netstandard2.0/OpenIddict.Core.dll",
         "lib/netstandard2.0/OpenIddict.Core.xml",
-        "openiddict.core.2.0.0-preview1-0649.nupkg.sha512",
+        "openiddict.core.2.0.0-rc1-0663.nupkg.sha512",
         "openiddict.core.nuspec"
       ]
     },
-    "OpenIddict.EntityFrameworkCore/2.0.0-preview1-0649": {
-      "sha512": "0vrdM6Im/vHoHYYvj2Pc6/U3zUK1ZU0cj8ur709auup560HE97gbKIhCexFrYA2WEuQmjlLHy7xN6/6EVIzE6g==",
+    "OpenIddict.EntityFrameworkCore/2.0.0-rc1-0663": {
+      "sha512": "+ZW54N5FQnnbPt49kQThrdR/5vE4FCY4npH/1Wk1rbzaUUxj4pYL1KGnbayaQnY3+3RAJF4Jz5e1QkIm6jBOoQ==",
       "type": "package",
-      "path": "openiddict.entityframeworkcore/2.0.0-preview1-0649",
+      "path": "openiddict.entityframeworkcore/2.0.0-rc1-0663",
       "files": [
         "lib/netstandard2.0/OpenIddict.EntityFrameworkCore.dll",
         "lib/netstandard2.0/OpenIddict.EntityFrameworkCore.xml",
-        "openiddict.entityframeworkcore.2.0.0-preview1-0649.nupkg.sha512",
+        "openiddict.entityframeworkcore.2.0.0-rc1-0663.nupkg.sha512",
         "openiddict.entityframeworkcore.nuspec"
       ]
     },
-    "OpenIddict.Models/2.0.0-preview1-0649": {
-      "sha512": "9huHMA3ImeQ+/eJPYA22orT1Z9u025rKZOF0TiiGDg0c1KhOcykS8TZaaLukMO/hgmp6xexkIAErnkpXfWrgTg==",
+    "OpenIddict.Models/2.0.0-rc1-0663": {
+      "sha512": "sTaXC8KtA6RlDdIDcM/QOJIs8BDZLcLXZFyHHLtdRVy4FCMTSMWgdrJg+qXW68vI3xlt8EmKepAZuczmEeg4/Q==",
       "type": "package",
-      "path": "openiddict.models/2.0.0-preview1-0649",
+      "path": "openiddict.models/2.0.0-rc1-0663",
       "files": [
         "lib/netstandard1.0/OpenIddict.Models.dll",
         "lib/netstandard1.0/OpenIddict.Models.xml",
-        "openiddict.models.2.0.0-preview1-0649.nupkg.sha512",
+        "openiddict.models.2.0.0-rc1-0663.nupkg.sha512",
         "openiddict.models.nuspec"
       ]
     },
-    "OpenIddict.Mvc/2.0.0-preview1-0649": {
-      "sha512": "N6HBxjitokvRFxntqqkVkJbzqnogx/TJDoGccvYGioVYJEnijsXDqZbKuG5bbGbzPz56ph1M4iHgbvFCH5K1Gg==",
+    "OpenIddict.Mvc/2.0.0-rc1-0663": {
+      "sha512": "pdXUkAs2vMnd5mHVKPv3X6/rLCCe3RrIl8FQtOZv4qJe9IKi4N37GXXORDiTB0YiRGuBqMxcylc4vg4rdssw+A==",
       "type": "package",
-      "path": "openiddict.mvc/2.0.0-preview1-0649",
+      "path": "openiddict.mvc/2.0.0-rc1-0663",
       "files": [
         "lib/netstandard2.0/OpenIddict.Mvc.dll",
         "lib/netstandard2.0/OpenIddict.Mvc.xml",
-        "openiddict.mvc.2.0.0-preview1-0649.nupkg.sha512",
+        "openiddict.mvc.2.0.0-rc1-0663.nupkg.sha512",
         "openiddict.mvc.nuspec"
       ]
     },
@@ -13739,6 +13739,7 @@
     ".NETCoreApp,Version=v2.0": [
       "AspNet.Security.OAuth.Validation >= 2.0.0-*",
       "Microsoft.AspNetCore.All >= 2.0.0",
+      "Microsoft.AspNetCore.Http.Abstractions >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.0",
       "NETCore.MailKit >= 2.0.0",
@@ -13815,6 +13816,10 @@
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "2.0.0"
+          },
+          "Microsoft.AspNetCore.Http.Abstractions": {
             "target": "Package",
             "version": "2.0.0"
           },

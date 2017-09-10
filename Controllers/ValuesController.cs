@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using AspNet.Security.OAuth.Validation;
 
 namespace dermal.api.Controllers
 {
@@ -10,6 +12,7 @@ namespace dermal.api.Controllers
     public class ValuesController : Controller
     {
         // GET api/values
+        [Authorize(AuthenticationSchemes = OAuthValidationDefaults.AuthenticationScheme)]
         [HttpGet]
         public IEnumerable<string> Get()
         {

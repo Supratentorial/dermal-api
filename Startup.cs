@@ -7,6 +7,11 @@ using dermal.api.Data;
 using dermal.api.Models;
 using Microsoft.AspNetCore.Identity;
 using AspNet.Security.OpenIdConnect.Primitives;
+using dermal.api.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Threading.Tasks;
+using System.Net;
+using Microsoft.AspNetCore.Http;
 
 namespace dermal.api
 {
@@ -44,6 +49,23 @@ namespace dermal.api
                 options.ClaimsIdentity.RoleClaimType = OpenIdConnectConstants.Claims.Role;
             });
 
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Events = new CookieAuthenticationEvents
+                {
+                    OnRedirectToLogin = context => {
+                        if (context.Request.Path.StartsWithSegments("/api"))
+                        {
+                            context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+                        }
+                        else {
+                            context.Response.Redirect(context.RedirectUri);
+                        }
+                        return Task.FromResult(0);
+                    }
+                };
+            });
+
             services.AddOpenIddict(options =>
             {
                 options.AddEntityFrameworkCoreStores<DermalDbContext>();
@@ -57,10 +79,13 @@ namespace dermal.api
 
             services.AddAuthentication()
                 .AddOAuthValidation();
+
+            //seed the database
+            services.AddTransient<IDatabaseInitializer, DatabaseInitializer>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IDatabaseInitializer databaseInitializer)
         {
             if (env.IsDevelopment())
             {
@@ -70,6 +95,8 @@ namespace dermal.api
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
             app.UseAuthentication();
+
+            databaseInitializer.Seed().GetAwaiter().GetResult();
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
