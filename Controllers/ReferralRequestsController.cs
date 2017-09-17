@@ -17,7 +17,6 @@ namespace dermal.api.Controllers
             this._context = context;
         }
 
-        [Authorize(AuthenticationSchemes = OAuthValidationDefaults.AuthenticationScheme)]
         [HttpGet]
         public async Task<IActionResult> GetReferralRequests(bool? includeMedia)
         {

@@ -12,7 +12,6 @@ namespace dermal.api.Controllers
     public class ValuesController : Controller
     {
         // GET api/values
-        [Authorize(AuthenticationSchemes = OAuthValidationDefaults.AuthenticationScheme)]
         [HttpGet]
         public IEnumerable<string> Get()
         {
