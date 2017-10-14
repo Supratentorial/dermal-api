@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using dermal.api.Data;
+using AutoMapper;
 
 namespace dermal.api
 {
@@ -22,9 +23,13 @@ namespace dermal.api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => {
+                options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            });
+
             services.AddMvc();
 
-            services.AddCors();
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddDbContext<DermalDbContext>(options =>
             {
@@ -40,7 +45,7 @@ namespace dermal.api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+            app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
 

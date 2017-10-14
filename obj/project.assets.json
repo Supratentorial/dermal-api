@@ -2,70 +2,47 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "AspNet.Security.OAuth.Validation/2.0.0-rc1-0286": {
+      "AutoMapper/6.1.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Authentication": "2.0.0",
-          "Newtonsoft.Json": "10.0.2"
+          "Microsoft.CSharp": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Linq.Queryable": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0"
         },
         "compile": {
-          "lib/netstandard2.0/AspNet.Security.OAuth.Validation.dll": {}
+          "lib/netstandard1.3/AutoMapper.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/AspNet.Security.OAuth.Validation.dll": {}
+          "lib/netstandard1.3/AutoMapper.dll": {}
         }
       },
-      "AspNet.Security.OpenIdConnect.Extensions/2.0.0-rc1-1310": {
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/3.0.1": {
         "type": "package",
         "dependencies": {
-          "AspNet.Security.OpenIdConnect.Primitives": "2.0.0-rc1-1310",
-          "Microsoft.AspNetCore.Authentication": "2.0.0"
+          "AutoMapper": "6.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.DependencyModel": "2.0.0"
         },
         "compile": {
-          "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Extensions.dll": {}
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Extensions.dll": {}
-        }
-      },
-      "AspNet.Security.OpenIdConnect.Primitives/2.0.0-rc1-1310": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Primitives": "2.0.0",
-          "Newtonsoft.Json": "10.0.2"
-        },
-        "compile": {
-          "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Primitives.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Primitives.dll": {}
-        }
-      },
-      "AspNet.Security.OpenIdConnect.Server/2.0.0-rc1-1310": {
-        "type": "package",
-        "dependencies": {
-          "AspNet.Security.OpenIdConnect.Extensions": "2.0.0-rc1-1310",
-          "Microsoft.AspNetCore.Authentication": "2.0.0",
-          "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.0",
-          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "2.1.4"
-        },
-        "compile": {
-          "lib/netcoreapp2.0/AspNet.Security.OpenIdConnect.Server.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp2.0/AspNet.Security.OpenIdConnect.Server.dll": {}
-        }
-      },
-      "CryptoHelper/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "2.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/CryptoHelper.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/CryptoHelper.dll": {}
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -106,28 +83,6 @@
             "assetType": "native",
             "rid": "win-x86"
           }
-        }
-      },
-      "MailKit/1.18.0": {
-        "type": "package",
-        "dependencies": {
-          "MimeKit": "1.18.0",
-          "NETStandard.Library": "1.6.1",
-          "Portable.BouncyCastle": "1.8.1.2",
-          "System.Data.Common": "4.3.0",
-          "System.Globalization.Extensions": "4.3.0",
-          "System.Net.NameResolution": "4.3.0",
-          "System.Net.NetworkInformation": "4.3.0",
-          "System.Net.Security": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.3.0",
-          "System.Text.Encoding.CodePages": "4.3.0"
-        },
-        "compile": {
-          "lib/netstandard1.3/MailKit.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/MailKit.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/2.4.0": {
@@ -2894,39 +2849,6 @@
           }
         }
       },
-      "MimeKit/1.18.0": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "Portable.BouncyCastle": "1.8.1.2",
-          "System.Data.Common": "4.3.0",
-          "System.Globalization.Extensions": "4.3.0",
-          "System.Net.NameResolution": "4.3.0",
-          "System.Net.NetworkInformation": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.3.0",
-          "System.Text.Encoding.CodePages": "4.3.0"
-        },
-        "compile": {
-          "lib/netstandard1.3/MimeKit.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/MimeKit.dll": {}
-        }
-      },
-      "NETCore.MailKit/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "MailKit": "1.18.0",
-          "Microsoft.Extensions.DependencyInjection": "2.0.0"
-        },
-        "compile": {
-          "lib/netcoreapp2.0/NETCore.MailKit.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp2.0/NETCore.MailKit.dll": {}
-        }
-      },
       "NETStandard.Library/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -2942,14 +2864,34 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/10.0.2": {
+      "Newtonsoft.Json/10.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.3.0",
-          "NETStandard.Library": "1.6.1",
+          "System.Collections": "4.3.0",
           "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.ObjectModel": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Numerics": "4.3.0",
           "System.Runtime.Serialization.Formatters": "4.3.0",
           "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.0",
+          "System.Xml.XDocument": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
         },
         "compile": {
@@ -2982,90 +2924,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/NuGet.Frameworks.dll": {}
-        }
-      },
-      "OpenIddict/2.0.0-rc1-0663": {
-        "type": "package",
-        "dependencies": {
-          "AspNet.Security.OpenIdConnect.Server": "2.0.0-rc1-1310",
-          "Microsoft.AspNetCore.Diagnostics.Abstractions": "2.0.0",
-          "Microsoft.Extensions.Caching.Abstractions": "2.0.0",
-          "Newtonsoft.Json.Bson": "1.0.1",
-          "OpenIddict.Core": "2.0.0-rc1-0663"
-        },
-        "compile": {
-          "lib/netstandard2.0/OpenIddict.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/OpenIddict.dll": {}
-        }
-      },
-      "OpenIddict.Core/2.0.0-rc1-0663": {
-        "type": "package",
-        "dependencies": {
-          "AspNet.Security.OpenIdConnect.Primitives": "2.0.0-rc1-1310",
-          "CryptoHelper": "3.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "Microsoft.Extensions.Options": "2.0.0",
-          "OpenIddict.Models": "2.0.0-rc1-0663"
-        },
-        "compile": {
-          "lib/netstandard2.0/OpenIddict.Core.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/OpenIddict.Core.dll": {}
-        }
-      },
-      "OpenIddict.EntityFrameworkCore/2.0.0-rc1-0663": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "2.0.0",
-          "OpenIddict.Core": "2.0.0-rc1-0663"
-        },
-        "compile": {
-          "lib/netstandard2.0/OpenIddict.EntityFrameworkCore.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/OpenIddict.EntityFrameworkCore.dll": {}
-        }
-      },
-      "OpenIddict.Models/2.0.0-rc1-0663": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "2.0.0"
-        },
-        "compile": {
-          "lib/netstandard1.0/OpenIddict.Models.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/OpenIddict.Models.dll": {}
-        }
-      },
-      "OpenIddict.Mvc/2.0.0-rc1-0663": {
-        "type": "package",
-        "dependencies": {
-          "AspNet.Security.OpenIdConnect.Server": "2.0.0-rc1-1310",
-          "Microsoft.AspNetCore.Mvc.Core": "2.0.0",
-          "OpenIddict.Core": "2.0.0-rc1-0663"
-        },
-        "compile": {
-          "lib/netstandard2.0/OpenIddict.Mvc.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/OpenIddict.Mvc.dll": {}
-        }
-      },
-      "Portable.BouncyCastle/1.8.1.2": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.0"
-        },
-        "compile": {
-          "lib/netstandard1.3/BouncyCastle.Crypto.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/BouncyCastle.Crypto.dll": {}
         }
       },
       "Remotion.Linq/2.1.1": {
@@ -3724,25 +3582,6 @@
           "ref/netstandard1.3/System.Console.dll": {}
         }
       },
-      "System.Data.Common/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Text.RegularExpressions": "4.3.0",
-          "System.Threading.Tasks": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.2/System.Data.Common.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.2/System.Data.Common.dll": {}
-        }
-      },
       "System.Data.SqlClient/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -3923,7 +3762,7 @@
           "System.Runtime.InteropServices": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/System.Globalization.Extensions.dll": {}
+          "ref/netstandard1.3/_._": {}
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netstandard1.3/System.Globalization.Extensions.dll": {
@@ -4099,17 +3938,17 @@
           "lib/netstandard1.3/System.Linq.Parallel.dll": {}
         }
       },
-      "System.Linq.Queryable/4.0.1": {
+      "System.Linq.Queryable/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.0.11",
-          "System.Diagnostics.Debug": "4.0.11",
-          "System.Linq": "4.1.0",
-          "System.Linq.Expressions": "4.1.0",
-          "System.Reflection": "4.1.0",
-          "System.Reflection.Extensions": "4.0.1",
-          "System.Resources.ResourceManager": "4.0.1",
-          "System.Runtime": "4.1.0"
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.0/System.Linq.Queryable.dll": {}
@@ -4189,51 +4028,6 @@
             "rid": "unix"
           },
           "runtimes/win/lib/netstandard1.3/System.Net.NameResolution.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.Net.NetworkInformation/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.Win32.Primitives": "4.3.0",
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Tracing": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.IO.FileSystem": "4.3.0",
-          "System.IO.FileSystem.Primitives": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Net.Primitives": "4.3.0",
-          "System.Net.Sockets": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Handles": "4.3.0",
-          "System.Runtime.InteropServices": "4.3.0",
-          "System.Security.Principal.Windows": "4.3.0",
-          "System.Threading": "4.3.0",
-          "System.Threading.Overlapped": "4.3.0",
-          "System.Threading.Tasks": "4.3.0",
-          "System.Threading.Thread": "4.3.0",
-          "System.Threading.ThreadPool": "4.3.0",
-          "runtime.native.System": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.3/System.Net.NetworkInformation.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/linux/lib/netstandard1.3/System.Net.NetworkInformation.dll": {
-            "assetType": "runtime",
-            "rid": "linux"
-          },
-          "runtimes/osx/lib/netstandard1.3/System.Net.NetworkInformation.dll": {
-            "assetType": "runtime",
-            "rid": "osx"
-          },
-          "runtimes/win/lib/netstandard1.3/System.Net.NetworkInformation.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -4984,7 +4778,7 @@
           "Microsoft.NETCore.Platforms": "2.0.0"
         },
         "compile": {
-          "ref/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
@@ -5040,28 +4834,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Threading.dll": {}
-        }
-      },
-      "System.Threading.Overlapped/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Handles": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.3/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.3/System.Threading.Overlapped.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/netstandard1.3/System.Threading.Overlapped.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
         }
       },
       "System.Threading.Tasks/4.3.0": {
@@ -5304,63 +5076,29 @@
     }
   },
   "libraries": {
-    "AspNet.Security.OAuth.Validation/2.0.0-rc1-0286": {
-      "sha512": "VjmfgdMqt1mHtk+XVIxnm1vWPbO4wxnfmKpfmccasqHfsj48/9vXw7tAH7Lc7sYfLCUKhKsSBD9BN/wU6ty1QA==",
+    "AutoMapper/6.1.1": {
+      "sha512": "A+6PAblvzmkXPS20nFBQJvlNSW5oEdyfN5+cxT/Du35fTNyuP5pNDXT64KT/jBgxt7CPduOM0Y7oLnNe0E5IXg==",
       "type": "package",
-      "path": "aspnet.security.oauth.validation/2.0.0-rc1-0286",
+      "path": "automapper/6.1.1",
       "files": [
-        "aspnet.security.oauth.validation.2.0.0-rc1-0286.nupkg.sha512",
-        "aspnet.security.oauth.validation.nuspec",
-        "lib/netstandard2.0/AspNet.Security.OAuth.Validation.dll",
-        "lib/netstandard2.0/AspNet.Security.OAuth.Validation.xml"
+        "automapper.6.1.1.nupkg.sha512",
+        "automapper.nuspec",
+        "lib/net45/AutoMapper.dll",
+        "lib/net45/AutoMapper.xml",
+        "lib/netstandard1.1/AutoMapper.dll",
+        "lib/netstandard1.1/AutoMapper.xml",
+        "lib/netstandard1.3/AutoMapper.dll",
+        "lib/netstandard1.3/AutoMapper.xml"
       ]
     },
-    "AspNet.Security.OpenIdConnect.Extensions/2.0.0-rc1-1310": {
-      "sha512": "ld0AhhfLZixeueX98fg/JzdhQs5l3EpXW6GOrc1MViJKOQNeKJQke8lndFZfNarRInbrvlE0DvEAVDtufTVaEw==",
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/3.0.1": {
+      "sha512": "i3IAYqWdE2UbqsmiiXE2L3khtKwkr+J8mT0zvUaiFUg72zC6BgLBo3dFvU5krq7QKBSsKVQ0NTCl/NmDoC0Hng==",
       "type": "package",
-      "path": "aspnet.security.openidconnect.extensions/2.0.0-rc1-1310",
+      "path": "automapper.extensions.microsoft.dependencyinjection/3.0.1",
       "files": [
-        "aspnet.security.openidconnect.extensions.2.0.0-rc1-1310.nupkg.sha512",
-        "aspnet.security.openidconnect.extensions.nuspec",
-        "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Extensions.dll",
-        "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Extensions.xml"
-      ]
-    },
-    "AspNet.Security.OpenIdConnect.Primitives/2.0.0-rc1-1310": {
-      "sha512": "Uf0dEb1G8T3P87mBkU83ZD0OGa2fdhBakATl9uq5oRRWUu61/waZ0bnHp25YglJb8KCkt0NhvPxqXEGYE2TeBA==",
-      "type": "package",
-      "path": "aspnet.security.openidconnect.primitives/2.0.0-rc1-1310",
-      "files": [
-        "aspnet.security.openidconnect.primitives.2.0.0-rc1-1310.nupkg.sha512",
-        "aspnet.security.openidconnect.primitives.nuspec",
-        "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Primitives.dll",
-        "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Primitives.xml"
-      ]
-    },
-    "AspNet.Security.OpenIdConnect.Server/2.0.0-rc1-1310": {
-      "sha512": "l2JFrARKKxAZgeNd4vxbCNeSgDqToQprFc8rBf/WAYb6hCIJjhRv0kEmQWE4yyg/H9a9BSkbFSy983faF/RxMA==",
-      "type": "package",
-      "path": "aspnet.security.openidconnect.server/2.0.0-rc1-1310",
-      "files": [
-        "aspnet.security.openidconnect.server.2.0.0-rc1-1310.nupkg.sha512",
-        "aspnet.security.openidconnect.server.nuspec",
-        "lib/net47/AspNet.Security.OpenIdConnect.Server.dll",
-        "lib/net47/AspNet.Security.OpenIdConnect.Server.xml",
-        "lib/netcoreapp2.0/AspNet.Security.OpenIdConnect.Server.dll",
-        "lib/netcoreapp2.0/AspNet.Security.OpenIdConnect.Server.xml",
-        "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Server.dll",
-        "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Server.xml"
-      ]
-    },
-    "CryptoHelper/3.0.0": {
-      "sha512": "CUCXoKUZ1XQSU5+TL2p5BkA6hSLHF4aBaSRNbxzTLQ6MPf1PEBLI1AH636ptL5iz0gYVieWWZu43Qn5j49LE/A==",
-      "type": "package",
-      "path": "cryptohelper/3.0.0",
-      "files": [
-        "cryptohelper.3.0.0.nupkg.sha512",
-        "cryptohelper.nuspec",
-        "lib/netstandard2.0/CryptoHelper.dll",
-        "lib/netstandard2.0/CryptoHelper.xml"
+        "automapper.extensions.microsoft.dependencyinjection.3.0.1.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
     "Libuv/1.10.0": {
@@ -5379,31 +5117,6 @@
         "runtimes/win-arm/native/libuv.dll",
         "runtimes/win-x64/native/libuv.dll",
         "runtimes/win-x86/native/libuv.dll"
-      ]
-    },
-    "MailKit/1.18.0": {
-      "sha512": "SQLkaLnX4jrwAF4NFEl9oYno/17m3mTAPHcxkinKkr92/x94RwRNIQWQ3B7yXAEjAi6nktcS/iDZXOGFJgBb5Q==",
-      "type": "package",
-      "path": "mailkit/1.18.0",
-      "files": [
-        "lib/MonoAndroid10/MailKit.dll",
-        "lib/MonoAndroid10/MailKit.xml",
-        "lib/Xamarin.iOS10/MailKit.dll",
-        "lib/Xamarin.iOS10/MailKit.xml",
-        "lib/net40/MailKit.dll",
-        "lib/net40/MailKit.xml",
-        "lib/net45/MailKit.dll",
-        "lib/net45/MailKit.xml",
-        "lib/net451/MailKit.dll",
-        "lib/net451/MailKit.xml",
-        "lib/netstandard1.3/MailKit.dll",
-        "lib/netstandard1.3/MailKit.xml",
-        "lib/win81/MailKit.dll",
-        "lib/win81/MailKit.xml",
-        "lib/wpa81/MailKit.dll",
-        "lib/wpa81/MailKit.xml",
-        "mailkit.1.18.0.nupkg.sha512",
-        "mailkit.nuspec"
       ]
     },
     "Microsoft.ApplicationInsights/2.4.0": {
@@ -8182,47 +7895,6 @@
         "version.txt"
       ]
     },
-    "MimeKit/1.18.0": {
-      "sha512": "4cu/BH/EenesTKaQscYWg6vuAYlh+CIbWZJlYoZ+9RklhqOFZZU1XlS4yI8hwDNtXKVH+COvsU+wpccCtCLdKA==",
-      "type": "package",
-      "path": "mimekit/1.18.0",
-      "files": [
-        "lib/MonoAndroid10/BouncyCastle.dll",
-        "lib/MonoAndroid10/MimeKit.dll",
-        "lib/MonoAndroid10/MimeKit.xml",
-        "lib/Xamarin.iOS10/BouncyCastle.dll",
-        "lib/Xamarin.iOS10/MimeKit.dll",
-        "lib/Xamarin.iOS10/MimeKit.xml",
-        "lib/net35/MimeKit.dll",
-        "lib/net35/MimeKit.xml",
-        "lib/net40/MimeKit.dll",
-        "lib/net40/MimeKit.xml",
-        "lib/net45/MimeKit.dll",
-        "lib/net45/MimeKit.xml",
-        "lib/net451/MimeKit.dll",
-        "lib/net451/MimeKit.xml",
-        "lib/netstandard1.3/MimeKit.dll",
-        "lib/netstandard1.3/MimeKit.xml",
-        "lib/portable-net45+win+wp80+MonoAndroid10+Xamarin.iOS10+MonoTouch10/MimeKit.dll",
-        "lib/portable-net45+win+wp80+MonoAndroid10+Xamarin.iOS10+MonoTouch10/MimeKit.xml",
-        "lib/portable-net45+win+wp80+MonoAndroid10+Xamarin.iOS10+MonoTouch10/Portable.Text.Encoding.dll",
-        "lib/wpa81/MimeKit.dll",
-        "lib/wpa81/MimeKit.xml",
-        "lib/wpa81/Portable.Text.Encoding.dll",
-        "mimekit.1.18.0.nupkg.sha512",
-        "mimekit.nuspec"
-      ]
-    },
-    "NETCore.MailKit/2.0.0": {
-      "sha512": "EF8N0un9rE0aAJBi/X5OZmGmfv9dHu0lSGIjWzDfgn2POIrpk9Eo9H+TW2PzWUaW1AmHfM9GqQd2nmrJHzb5Ew==",
-      "type": "package",
-      "path": "netcore.mailkit/2.0.0",
-      "files": [
-        "lib/netcoreapp2.0/NETCore.MailKit.dll",
-        "netcore.mailkit.2.0.0.nupkg.sha512",
-        "netcore.mailkit.nuspec"
-      ]
-    },
     "NETStandard.Library/2.0.0": {
       "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
       "type": "package",
@@ -8351,12 +8023,11 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/10.0.2": {
-      "sha512": "iwElSU2IXmwGvytJsezyDML2ZWDkG2JzTYzlU/BNlmzMdlmRvbnwITsGGY74gwVEpDli1UdOLkMT7/3jxWvXzA==",
+    "Newtonsoft.Json/10.0.1": {
+      "sha512": "ebWzW9j2nwxQeBo59As2TYn7nYr9BHicqqCwHOD1Vdo+50HBtLPuqdiCYJcLdTRknpYis/DSEOQz5KmZxwrIAg==",
       "type": "package",
-      "path": "newtonsoft.json/10.0.2",
+      "path": "newtonsoft.json/10.0.1",
       "files": [
-        "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -8369,11 +8040,9 @@
         "lib/netstandard1.0/Newtonsoft.Json.xml",
         "lib/netstandard1.3/Newtonsoft.Json.dll",
         "lib/netstandard1.3/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+win8+wpa81+wp8/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+win8+wpa81+wp8/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wpa81+wp8/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wpa81+wp8/Newtonsoft.Json.xml",
-        "newtonsoft.json.10.0.2.nupkg.sha512",
+        "newtonsoft.json.10.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
       ]
@@ -8404,85 +8073,6 @@
         "lib/netstandard1.3/NuGet.Frameworks.xml",
         "nuget.frameworks.4.0.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
-      ]
-    },
-    "OpenIddict/2.0.0-rc1-0663": {
-      "sha512": "IMd118HEcfNgkZOzXd5c/HJWO8nPE6Blgx+2IhsZFX17njfGaElZhLGUgkK0h/fIrlmuhZv0QXRyqipZntrZhw==",
-      "type": "package",
-      "path": "openiddict/2.0.0-rc1-0663",
-      "files": [
-        "lib/netstandard2.0/OpenIddict.dll",
-        "lib/netstandard2.0/OpenIddict.xml",
-        "openiddict.2.0.0-rc1-0663.nupkg.sha512",
-        "openiddict.nuspec"
-      ]
-    },
-    "OpenIddict.Core/2.0.0-rc1-0663": {
-      "sha512": "pGnagb1S2mCpcsWXKFgR+SNXSaQu2xlSUT8HhMxzU078gtvAe/ip0nNm0S9DMC8ER4l3XmVvwNSoe39E9P0l1A==",
-      "type": "package",
-      "path": "openiddict.core/2.0.0-rc1-0663",
-      "files": [
-        "lib/netstandard2.0/OpenIddict.Core.dll",
-        "lib/netstandard2.0/OpenIddict.Core.xml",
-        "openiddict.core.2.0.0-rc1-0663.nupkg.sha512",
-        "openiddict.core.nuspec"
-      ]
-    },
-    "OpenIddict.EntityFrameworkCore/2.0.0-rc1-0663": {
-      "sha512": "+ZW54N5FQnnbPt49kQThrdR/5vE4FCY4npH/1Wk1rbzaUUxj4pYL1KGnbayaQnY3+3RAJF4Jz5e1QkIm6jBOoQ==",
-      "type": "package",
-      "path": "openiddict.entityframeworkcore/2.0.0-rc1-0663",
-      "files": [
-        "lib/netstandard2.0/OpenIddict.EntityFrameworkCore.dll",
-        "lib/netstandard2.0/OpenIddict.EntityFrameworkCore.xml",
-        "openiddict.entityframeworkcore.2.0.0-rc1-0663.nupkg.sha512",
-        "openiddict.entityframeworkcore.nuspec"
-      ]
-    },
-    "OpenIddict.Models/2.0.0-rc1-0663": {
-      "sha512": "sTaXC8KtA6RlDdIDcM/QOJIs8BDZLcLXZFyHHLtdRVy4FCMTSMWgdrJg+qXW68vI3xlt8EmKepAZuczmEeg4/Q==",
-      "type": "package",
-      "path": "openiddict.models/2.0.0-rc1-0663",
-      "files": [
-        "lib/netstandard1.0/OpenIddict.Models.dll",
-        "lib/netstandard1.0/OpenIddict.Models.xml",
-        "openiddict.models.2.0.0-rc1-0663.nupkg.sha512",
-        "openiddict.models.nuspec"
-      ]
-    },
-    "OpenIddict.Mvc/2.0.0-rc1-0663": {
-      "sha512": "pdXUkAs2vMnd5mHVKPv3X6/rLCCe3RrIl8FQtOZv4qJe9IKi4N37GXXORDiTB0YiRGuBqMxcylc4vg4rdssw+A==",
-      "type": "package",
-      "path": "openiddict.mvc/2.0.0-rc1-0663",
-      "files": [
-        "lib/netstandard2.0/OpenIddict.Mvc.dll",
-        "lib/netstandard2.0/OpenIddict.Mvc.xml",
-        "openiddict.mvc.2.0.0-rc1-0663.nupkg.sha512",
-        "openiddict.mvc.nuspec"
-      ]
-    },
-    "Portable.BouncyCastle/1.8.1.2": {
-      "sha512": "G0pWrYwtjjiyka+twqqphegc4ddDWskvf2uWu2YiAUNdaAz0UYa/eXBlt+xjafby5Opa6J1ySw5MPezwiGi9aQ==",
-      "type": "package",
-      "path": "portable.bouncycastle/1.8.1.2",
-      "files": [
-        "Readme.html",
-        "lib/net4/BouncyCastle.Crypto.dll",
-        "lib/net4/BouncyCastle.Crypto.pdb",
-        "lib/net4/BouncyCastle.Crypto.xml",
-        "lib/netstandard1.0/BouncyCastle.Crypto.deps.json",
-        "lib/netstandard1.0/BouncyCastle.Crypto.dll",
-        "lib/netstandard1.0/BouncyCastle.Crypto.pdb",
-        "lib/netstandard1.0/BouncyCastle.Crypto.xml",
-        "lib/netstandard1.3/BouncyCastle.Crypto.deps.json",
-        "lib/netstandard1.3/BouncyCastle.Crypto.dll",
-        "lib/netstandard1.3/BouncyCastle.Crypto.pdb",
-        "lib/netstandard1.3/BouncyCastle.Crypto.xml",
-        "lib/portable-net4+sl5+wp8+win8+wpa81/BouncyCastle.Crypto.dll",
-        "lib/portable-net4+sl5+wp8+win8+wpa81/BouncyCastle.Crypto.pdb",
-        "lib/portable-net4+sl5+wp8+win8+wpa81/BouncyCastle.Crypto.xml",
-        "portable.bouncycastle.1.8.1.2.nupkg.sha512",
-        "portable.bouncycastle.nuspec"
       ]
     },
     "Remotion.Linq/2.1.1": {
@@ -9544,55 +9134,6 @@
         "ref/xamarinwatchos10/_._",
         "system.console.4.3.0.nupkg.sha512",
         "system.console.nuspec"
-      ]
-    },
-    "System.Data.Common/4.3.0": {
-      "sha512": "lm6E3T5u7BOuEH0u18JpbJHxBfOJPuCyl4Kg1RH10ktYLp5uEEE1xKrHW56/We4SnZpGAuCc9N0MJpSDhTHZGQ==",
-      "type": "package",
-      "path": "system.data.common/4.3.0",
-      "files": [
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net451/System.Data.Common.dll",
-        "lib/netstandard1.2/System.Data.Common.dll",
-        "lib/portable-net451+win8+wp8+wpa81/System.Data.Common.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net451/System.Data.Common.dll",
-        "ref/netstandard1.2/System.Data.Common.dll",
-        "ref/netstandard1.2/System.Data.Common.xml",
-        "ref/netstandard1.2/de/System.Data.Common.xml",
-        "ref/netstandard1.2/es/System.Data.Common.xml",
-        "ref/netstandard1.2/fr/System.Data.Common.xml",
-        "ref/netstandard1.2/it/System.Data.Common.xml",
-        "ref/netstandard1.2/ja/System.Data.Common.xml",
-        "ref/netstandard1.2/ko/System.Data.Common.xml",
-        "ref/netstandard1.2/ru/System.Data.Common.xml",
-        "ref/netstandard1.2/zh-hans/System.Data.Common.xml",
-        "ref/netstandard1.2/zh-hant/System.Data.Common.xml",
-        "ref/portable-net451+win8+wp8+wpa81/System.Data.Common.dll",
-        "ref/portable-net451+win8+wp8+wpa81/System.Data.Common.xml",
-        "ref/portable-net451+win8+wp8+wpa81/de/System.Data.Common.xml",
-        "ref/portable-net451+win8+wp8+wpa81/es/System.Data.Common.xml",
-        "ref/portable-net451+win8+wp8+wpa81/fr/System.Data.Common.xml",
-        "ref/portable-net451+win8+wp8+wpa81/it/System.Data.Common.xml",
-        "ref/portable-net451+win8+wp8+wpa81/ja/System.Data.Common.xml",
-        "ref/portable-net451+win8+wp8+wpa81/ko/System.Data.Common.xml",
-        "ref/portable-net451+win8+wp8+wpa81/ru/System.Data.Common.xml",
-        "ref/portable-net451+win8+wp8+wpa81/zh-hans/System.Data.Common.xml",
-        "ref/portable-net451+win8+wp8+wpa81/zh-hant/System.Data.Common.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.data.common.4.3.0.nupkg.sha512",
-        "system.data.common.nuspec"
       ]
     },
     "System.Data.SqlClient/4.4.0": {
@@ -10701,10 +10242,10 @@
         "system.linq.parallel.nuspec"
       ]
     },
-    "System.Linq.Queryable/4.0.1": {
-      "sha512": "Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
+    "System.Linq.Queryable/4.3.0": {
+      "sha512": "In1Bmmvl/j52yPu3xgakQSI0YIckPUr870w4K5+Lak3JCCa8hl+my65lABOuKfYs4ugmZy25ScFerC4nz8+b6g==",
       "type": "package",
-      "path": "system.linq.queryable/4.0.1",
+      "path": "system.linq.queryable/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -10754,7 +10295,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.linq.queryable.4.0.1.nupkg.sha512",
+        "system.linq.queryable.4.3.0.nupkg.sha512",
         "system.linq.queryable.nuspec"
       ]
     },
@@ -10876,79 +10417,6 @@
         "runtimes/win/lib/netstandard1.3/System.Net.NameResolution.dll",
         "system.net.nameresolution.4.3.0.nupkg.sha512",
         "system.net.nameresolution.nuspec"
-      ]
-    },
-    "System.Net.NetworkInformation/4.3.0": {
-      "sha512": "zNVmWVry0pAu7lcrRBhwwU96WUdbsrGL3azyzsbXmVNptae1+Za+UgOe9Z6s8iaWhPn7/l4wQqhC56HZWq7tkg==",
-      "type": "package",
-      "path": "system.net.networkinformation/4.3.0",
-      "files": [
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/net46/System.Net.NetworkInformation.dll",
-        "lib/portable-net45+win8+wp8+wpa81/_._",
-        "lib/win8/_._",
-        "lib/wp80/_._",
-        "lib/wpa81/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/net46/System.Net.NetworkInformation.dll",
-        "ref/netcore50/System.Net.NetworkInformation.dll",
-        "ref/netcore50/System.Net.NetworkInformation.xml",
-        "ref/netcore50/de/System.Net.NetworkInformation.xml",
-        "ref/netcore50/es/System.Net.NetworkInformation.xml",
-        "ref/netcore50/fr/System.Net.NetworkInformation.xml",
-        "ref/netcore50/it/System.Net.NetworkInformation.xml",
-        "ref/netcore50/ja/System.Net.NetworkInformation.xml",
-        "ref/netcore50/ko/System.Net.NetworkInformation.xml",
-        "ref/netcore50/ru/System.Net.NetworkInformation.xml",
-        "ref/netcore50/zh-hans/System.Net.NetworkInformation.xml",
-        "ref/netcore50/zh-hant/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.0/System.Net.NetworkInformation.dll",
-        "ref/netstandard1.0/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.0/de/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.0/es/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.0/fr/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.0/it/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.0/ja/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.0/ko/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.0/ru/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.0/zh-hans/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.0/zh-hant/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.3/System.Net.NetworkInformation.dll",
-        "ref/netstandard1.3/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.3/de/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.3/es/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.3/fr/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.3/it/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.3/ja/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.3/ko/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.3/ru/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.3/zh-hans/System.Net.NetworkInformation.xml",
-        "ref/netstandard1.3/zh-hant/System.Net.NetworkInformation.xml",
-        "ref/portable-net45+win8+wp8+wpa81/_._",
-        "ref/win8/_._",
-        "ref/wp80/_._",
-        "ref/wpa81/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/linux/lib/netstandard1.3/System.Net.NetworkInformation.dll",
-        "runtimes/osx/lib/netstandard1.3/System.Net.NetworkInformation.dll",
-        "runtimes/win/lib/net46/System.Net.NetworkInformation.dll",
-        "runtimes/win/lib/netcore50/System.Net.NetworkInformation.dll",
-        "runtimes/win/lib/netstandard1.3/System.Net.NetworkInformation.dll",
-        "system.net.networkinformation.4.3.0.nupkg.sha512",
-        "system.net.networkinformation.nuspec"
       ]
     },
     "System.Net.Primitives/4.3.0": {
@@ -13052,34 +12520,6 @@
         "system.threading.nuspec"
       ]
     },
-    "System.Threading.Overlapped/4.3.0": {
-      "sha512": "m3HQ2dPiX/DSTpf+yJt8B0c+SRvzfqAJKx+QDWi+VLhz8svLT23MVjEOHPF/KiSLeArKU/iHescrbLd3yVgyNg==",
-      "type": "package",
-      "path": "system.threading.overlapped/4.3.0",
-      "files": [
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/net46/System.Threading.Overlapped.dll",
-        "ref/net46/System.Threading.Overlapped.dll",
-        "ref/netstandard1.3/System.Threading.Overlapped.dll",
-        "ref/netstandard1.3/System.Threading.Overlapped.xml",
-        "ref/netstandard1.3/de/System.Threading.Overlapped.xml",
-        "ref/netstandard1.3/es/System.Threading.Overlapped.xml",
-        "ref/netstandard1.3/fr/System.Threading.Overlapped.xml",
-        "ref/netstandard1.3/it/System.Threading.Overlapped.xml",
-        "ref/netstandard1.3/ja/System.Threading.Overlapped.xml",
-        "ref/netstandard1.3/ko/System.Threading.Overlapped.xml",
-        "ref/netstandard1.3/ru/System.Threading.Overlapped.xml",
-        "ref/netstandard1.3/zh-hans/System.Threading.Overlapped.xml",
-        "ref/netstandard1.3/zh-hant/System.Threading.Overlapped.xml",
-        "runtimes/unix/lib/netstandard1.3/System.Threading.Overlapped.dll",
-        "runtimes/win/lib/net46/System.Threading.Overlapped.dll",
-        "runtimes/win/lib/netcore50/System.Threading.Overlapped.dll",
-        "runtimes/win/lib/netstandard1.3/System.Threading.Overlapped.dll",
-        "system.threading.overlapped.4.3.0.nupkg.sha512",
-        "system.threading.overlapped.nuspec"
-      ]
-    },
     "System.Threading.Tasks/4.3.0": {
       "sha512": "LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "type": "package",
@@ -13737,15 +13177,12 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "AspNet.Security.OAuth.Validation >= 2.0.0-*",
+      "AutoMapper >= 6.1.1",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 3.0.1",
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.AspNetCore.Http.Abstractions >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.0",
-      "NETCore.MailKit >= 2.0.0",
-      "OpenIddict >= 2.0.0-*",
-      "OpenIddict.EntityFrameworkCore >= 2.0.0-*",
-      "OpenIddict.Mvc >= 2.0.0-*"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.0"
     ]
   },
   "packageFolders": {
@@ -13794,26 +13231,22 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "OpenIddict": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
-            "version": "2.0.0-*"
-          },
-          "OpenIddict.Mvc": {
-            "target": "Package",
-            "version": "2.0.0-*"
+            "version": "3.0.1"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "2.0.0"
           },
-          "OpenIddict.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "2.0.0-*"
-          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "2.0.0",
             "autoReferenced": true
+          },
+          "AutoMapper": {
+            "target": "Package",
+            "version": "6.1.1"
           },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
@@ -13822,14 +13255,6 @@
           "Microsoft.AspNetCore.Http.Abstractions": {
             "target": "Package",
             "version": "2.0.0"
-          },
-          "NETCore.MailKit": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "AspNet.Security.OAuth.Validation": {
-            "target": "Package",
-            "version": "2.0.0-*"
           }
         },
         "imports": [

@@ -2,8 +2,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using dermal.api.Data;
-using Microsoft.AspNetCore.Authorization;
-using AspNet.Security.OAuth.Validation;
 
 namespace dermal.api.Controllers
 {
