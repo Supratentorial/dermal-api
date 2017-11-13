@@ -301,3 +301,7 @@ obj/dermal-api.csproj.nuget.cache
 obj/dermal-api.csproj.nuget.g.props
 obj/dermal-api.csproj.nuget.g.targets
 obj/project.assets.json
+obj/project.assets.json
+obj/project.assets.json
+obj/dermal-api.csproj.nuget.g.props
+obj/dermal-api.csproj.nuget.cache

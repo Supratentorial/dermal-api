@@ -11,9 +11,10 @@ using System;
 namespace dermal.api.Migrations
 {
     [DbContext(typeof(DermalDbContext))]
-    partial class DermalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171029004916_1")]
+    partial class _1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

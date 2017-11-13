@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace dermal.api.Controllers
 {
@@ -23,30 +24,41 @@ namespace dermal.api.Controllers
             this._context = context;
         }
 
-        public async Task<IActionResult> GetPatients([FromRoute]string searchTerm)
+        [HttpGet]
+        public async Task<IActionResult> GetPatients([FromQuery]string searchTerm)
         {
-            var patients = this._context.Patients;
-            if (!String.IsNullOrEmpty(searchTerm)) {
-                patients = patients.Where(p => p.Hu)
+            IQueryable<Patient> patients = this._context.Patients.Include(p => p.Telecom).Include(p => p.Addresses).Include(p => p.Name).Include(p => p.GeneralPractitioner);
+            if (!String.IsNullOrEmpty(searchTerm))
+            {
+                patients = patients.Where(p => p.Name.Given.Contains(searchTerm) || p.Name.Family.Contains(searchTerm));
             }
-            return Ok(patients);
+            var filteredPatients = await patients.ToListAsync();
+            var patientDtos = Mapper.Map<List<Patient>, List<PatientDTO>>(filteredPatients);
+            return Ok(patientDtos);
         }
 
         [HttpGet("{patientId}")]
         public async Task<IActionResult> GetPatient([FromRoute]int patientId)
         {
-            var patient = await this._context.Patients.SingleOrDefaultAsync(p => p.Id == patientId);
-            return Ok(patient);
+            if (patientId == 0) {
+                return BadRequest();
+            }
+            var patient = await this._context.Patients.Include(p => p.Name).Include(p => p.Addresses).Include(p => p.Telecom).SingleOrDefaultAsync(p => p.Id == patientId);
+            if (patient == null) {
+                return NotFound();
+            }
+            return Ok(Mapper.Map<Patient, PatientDTO>(patient));
         }
 
 
         [HttpPost]
         public async Task<IActionResult> PostPatient([FromBody]PatientDTO patientDTO)
         {
-            if (!ModelState.IsValid) {
+            if (!ModelState.IsValid)
+            {
                 return BadRequest();
             }
-
+             
             if (patientDTO == null)
             {
                 return BadRequest();

@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using dermal.api.Data;
 using AutoMapper;
+using IdentityServer4.AccessTokenValidation;
 
 namespace dermal.api
 {
@@ -24,7 +25,7 @@ namespace dermal.api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors(options => {
-                options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+                options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
 
             services.AddMvc();
@@ -35,6 +36,14 @@ namespace dermal.api
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DermalDb"));
             });
+
+            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                .AddIdentityServerAuthentication(options => {
+                    options.Authority = Configuration["IdentityServerHost"];
+                    options.ApiName = "dermal-api";
+                });
+
+            services.AddAuthorization(options => { });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
