@@ -39,6 +39,8 @@ public class Patient
         return Telecom.Where(t => t.System == "phone" && t.Use == "mobile").SingleOrDefault();
     }
 
+    
+
     public string GetGivenNames()
     {
         if (Name != null)
@@ -64,5 +66,11 @@ public class Patient
             return Name.Prefix;
         }
         return null;
+    }
+
+    public void SetTitle(string title) {
+        if (Name != null) {
+            Name.Prefix = title;
+        }
     }
 }

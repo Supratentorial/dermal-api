@@ -11,9 +11,9 @@ namespace dermal.api
     {
         public MappingProfile()
         {
-            CreateMap<Patient, PatientDTO>();
-
-            CreateMap<PatientDTO, Patient>();
+            CreateMap<Patient, PatientDTO>().ReverseMap()
+                .ForPath(s => s.Telecom, opt => opt.MapFrom(src => src.Email))
+                .ForPath(s => s.Telecom, opt => opt.MapFrom(src => src.MobilePhone));
         }
     }
 }

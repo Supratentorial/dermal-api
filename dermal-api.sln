@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dermal-api", "dermal-api.csproj", "{23FF59DA-A70B-4BC8-8E87-0D43B282942C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dermal.Api.Tests", "..\Dermal.Api.Tests\Dermal.Api.Tests.csproj", "{29769DC1-0DFB-4339-9427-88D8C06DFD13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{23FF59DA-A70B-4BC8-8E87-0D43B282942C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23FF59DA-A70B-4BC8-8E87-0D43B282942C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23FF59DA-A70B-4BC8-8E87-0D43B282942C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29769DC1-0DFB-4339-9427-88D8C06DFD13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29769DC1-0DFB-4339-9427-88D8C06DFD13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29769DC1-0DFB-4339-9427-88D8C06DFD13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29769DC1-0DFB-4339-9427-88D8C06DFD13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

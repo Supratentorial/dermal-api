@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
+using dermal.api.Services;
 
 namespace dermal.api.Controllers
 {
@@ -50,6 +51,23 @@ namespace dermal.api.Controllers
             return Ok(Mapper.Map<Patient, PatientDTO>(patient));
         }
 
+        [HttpPut]
+        public async Task<IActionResult> PutPatient([FromBody]PatientDTO patientDTO) {
+            if (!ModelState.IsValid) {
+                List<string> list = (from modelState in ModelState.Values from error in modelState.Errors select error.ErrorMessage).ToList();
+                return new BadRequestObjectResult(list);
+            }
+            if (patientDTO == null)
+            {
+                return BadRequest();
+            }
+            if (patientDTO.Id == 0) {
+                return BadRequest();
+            }
+            var patient = this._mapper.Map<Patient>(patientDTO);
+            this._context.Update(patient);
+            return Ok(await this._context.SaveChangesAsync());
+        }
 
         [HttpPost]
         public async Task<IActionResult> PostPatient([FromBody]PatientDTO patientDTO)
@@ -68,24 +86,6 @@ namespace dermal.api.Controllers
                 return BadRequest();
             }
             var patient = this._mapper.Map<Patient>(patientDTO);
-            patient.Telecom = new List<ContactPoint>();
-            patient.Addresses = new List<Address>();
-            if (patientDTO.Email != null)
-            {
-                patient.Telecom.Add(patientDTO.Email);
-            }
-            if (patientDTO.MobilePhone != null)
-            {
-                patient.Telecom.Add(patientDTO.MobilePhone);
-            }
-            if (patientDTO.ResidentialAddress != null)
-            {
-                patient.Addresses.Add(patientDTO.ResidentialAddress);
-            }
-            if (patientDTO.PostalAddress != null)
-            {
-                patient.Addresses.Add(patientDTO.PostalAddress);
-            }
             this._context.Patients.Add(patient);
             await this._context.SaveChangesAsync();
             return StatusCode(201);

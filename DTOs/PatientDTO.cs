@@ -10,7 +10,7 @@ namespace dermal.api.DTOs
         public string Title { get; set; }
         public string GivenNames { get; set; }
         public string FamilyName { get; set; }
-        public DateTime Birthday { get; set; }
+        public DateTime BirthDate { get; set; }
         public string Gender { get; set; }
         public bool Active { get; set; }
         public Address ResidentialAddress { get; set; }
