@@ -1,12 +1,13 @@
 ﻿using System;
 
-namespace dermal.api.DTOs
+namespace dermal.api.Dtos
 {
-    public class PatientDTO
+    public class PatientDto
     {
         public int Id { get; set; }
         public ContactPoint MobilePhone { get; set; }
         public ContactPoint Email { get; set; }
+        public int NameId { get; set; }
         public string Title { get; set; }
         public string GivenNames { get; set; }
         public string FamilyName { get; set; }

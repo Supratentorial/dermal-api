@@ -26,20 +26,32 @@ public class Patient
 
     public Address GetResidentialAddress()
     {
-        return Addresses.Where(a => a.Type == "residential").SingleOrDefault();
+        if (Addresses != null)
+        {
+            return Addresses.Where(a => a.Type == "residential").SingleOrDefault();
+        }
+        return null;
     }
 
     public Address GetPostalAddress()
     {
-        return Addresses.Where(a => a.Type == "postal").SingleOrDefault();
+        if (Addresses != null)
+        {
+            return Addresses.Where(a => a.Type == "postal").SingleOrDefault();
+        }
+        return null;
     }
 
     public ContactPoint GetMobilePhone()
     {
-        return Telecom.Where(t => t.System == "phone" && t.Use == "mobile").SingleOrDefault();
+        if (Telecom != null)
+        {
+            return Telecom.Where(t => t.System == "phone" && t.Use == "mobile").SingleOrDefault();
+        }
+        return null;
     }
 
-    
+
 
     public string GetGivenNames()
     {
@@ -68,8 +80,10 @@ public class Patient
         return null;
     }
 
-    public void SetTitle(string title) {
-        if (Name != null) {
+    public void SetTitle(string title)
+    {
+        if (Name != null)
+        {
             Name.Prefix = title;
         }
     }

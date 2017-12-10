@@ -1,6 +1,5 @@
-using AutoMapper;
 using dermal.api.Data;
-using dermal.api.DTOs;
+using dermal.api.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using dermal.api.Services;
+using dermal.api.Interfaces;
 
 namespace dermal.api.Controllers
 {
@@ -16,10 +16,10 @@ namespace dermal.api.Controllers
     public class PatientsController : Controller
     {
 
-        private readonly IMapper _mapper;
         private readonly DermalDbContext _context;
+        private readonly IPatientMapper _mapper;
 
-        public PatientsController(IMapper mapper, DermalDbContext context)
+        public PatientsController(IPatientMapper mapper, DermalDbContext context)
         {
             this._mapper = mapper;
             this._context = context;
@@ -34,8 +34,7 @@ namespace dermal.api.Controllers
                 patients = patients.Where(p => p.Name.Given.Contains(searchTerm) || p.Name.Family.Contains(searchTerm));
             }
             var filteredPatients = await patients.ToListAsync();
-            var patientDtos = Mapper.Map<List<Patient>, List<PatientDTO>>(filteredPatients);
-            return Ok(patientDtos);
+            return Ok(filteredPatients);
         }
 
         [HttpGet("{patientId}")]
@@ -48,44 +47,44 @@ namespace dermal.api.Controllers
             if (patient == null) {
                 return NotFound();
             }
-            return Ok(Mapper.Map<Patient, PatientDTO>(patient));
+            return Ok(_mapper.WritePatientDto(patient));
         }
 
         [HttpPut]
-        public async Task<IActionResult> PutPatient([FromBody]PatientDTO patientDTO) {
+        public async Task<IActionResult> PutPatient([FromBody]PatientDto patientDto) {
             if (!ModelState.IsValid) {
                 List<string> list = (from modelState in ModelState.Values from error in modelState.Errors select error.ErrorMessage).ToList();
                 return new BadRequestObjectResult(list);
             }
-            if (patientDTO == null)
+            if (patientDto == null)
             {
                 return BadRequest();
             }
-            if (patientDTO.Id == 0) {
+            if (patientDto.Id == 0) {
                 return BadRequest();
             }
-            var patient = this._mapper.Map<Patient>(patientDTO);
+            var patient = this._mapper.WritePatient(patientDto);
             this._context.Update(patient);
             return Ok(await this._context.SaveChangesAsync());
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostPatient([FromBody]PatientDTO patientDTO)
+        public async Task<IActionResult> PostPatient([FromBody]PatientDto patientDto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
              
-            if (patientDTO == null)
+            if (patientDto == null)
             {
                 return BadRequest();
             }
-            if (patientDTO.Id != 0)
+            if (patientDto.Id != 0)
             {
                 return BadRequest();
             }
-            var patient = this._mapper.Map<Patient>(patientDTO);
+            var patient = this._mapper.WritePatient(patientDto);
             this._context.Patients.Add(patient);
             await this._context.SaveChangesAsync();
             return StatusCode(201);

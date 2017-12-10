@@ -4,8 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using dermal.api.Data;
-using AutoMapper;
 using IdentityServer4.AccessTokenValidation;
+using dermal.api.Interfaces;
+using dermal.api.Services;
 
 namespace dermal.api
 {
@@ -30,8 +31,6 @@ namespace dermal.api
 
             services.AddMvc();
 
-            services.AddAutoMapper(typeof(Startup));
-
             services.AddDbContext<DermalDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DermalDb"));
@@ -44,6 +43,8 @@ namespace dermal.api
                 });
 
             services.AddAuthorization(options => { });
+
+            services.AddTransient<IPatientMapper, PatientMapper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
