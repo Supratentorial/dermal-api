@@ -31,10 +31,14 @@ namespace dermal.api.Controllers
             IQueryable<Patient> patients = this._context.Patients.Include(p => p.Telecom).Include(p => p.Addresses).Include(p => p.Name).Include(p => p.GeneralPractitioner);
             if (!String.IsNullOrEmpty(searchTerm))
             {
-                patients = patients.Where(p => p.Name.Given.Contains(searchTerm) || p.Name.Family.Contains(searchTerm));
+                patients = patients.Where(p => p.Name.Given.Contains(searchTerm) || p.Name.Family.Contains(searchTerm) || (p.Name.Given + " " + p.Name.Family).Contains(searchTerm));
             }
             var filteredPatients = await patients.ToListAsync();
-            return Ok(filteredPatients);
+            var patientDtos = new List<PatientDto>();
+            foreach (var patient in filteredPatients) {
+                patientDtos.Add(_mapper.WritePatientDto(patient));
+            }
+            return Ok(patientDtos);
         }
 
         [HttpGet("{patientId}")]
@@ -50,12 +54,9 @@ namespace dermal.api.Controllers
             return Ok(_mapper.WritePatientDto(patient));
         }
 
+        [ValidateModel]
         [HttpPut]
         public async Task<IActionResult> PutPatient([FromBody]PatientDto patientDto) {
-            if (!ModelState.IsValid) {
-                List<string> list = (from modelState in ModelState.Values from error in modelState.Errors select error.ErrorMessage).ToList();
-                return new BadRequestObjectResult(list);
-            }
             if (patientDto == null)
             {
                 return BadRequest();
@@ -65,7 +66,8 @@ namespace dermal.api.Controllers
             }
             var patient = this._mapper.WritePatient(patientDto);
             this._context.Update(patient);
-            return Ok(await this._context.SaveChangesAsync());
+            await this._context.SaveChangesAsync();
+            return Ok(_mapper.WritePatientDto(patient));
         }
 
         [HttpPost]

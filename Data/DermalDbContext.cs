@@ -7,7 +7,7 @@ namespace dermal.api.Data
     {
         public DermalDbContext(DbContextOptions<DermalDbContext> options) : base(options)
         {
-
+            
         }
 
         public DbSet<ReferralRequest> ReferralRequests { get; set; }

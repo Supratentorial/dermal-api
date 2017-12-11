@@ -9,6 +9,13 @@ namespace dermal.api.Services
 {
     public class PatientMapper : IPatientMapper
     {
+        private readonly IAgeUtilityMethods ageUtilityMethods;
+
+        public PatientMapper(IAgeUtilityMethods ageUtilityMethods)
+        {
+            this.ageUtilityMethods = ageUtilityMethods;
+        }
+
         public Patient WritePatient(PatientDto patientDto)
         {
             var patient = new Patient
@@ -25,7 +32,15 @@ namespace dermal.api.Services
                 Gender = patientDto.Gender,
                 BirthDate = patientDto.BirthDate
             };
-
+            var telecom = new List<ContactPoint>();
+            if (patientDto.MobilePhone != null)
+            {
+                telecom.Add(patientDto.MobilePhone);
+            }
+            if (patientDto.Email != null) {
+                telecom.Add(patientDto.Email);
+            }
+            patient.Telecom = telecom;
             return patient;
         }
 
@@ -41,7 +56,7 @@ namespace dermal.api.Services
                 Gender = patient.Gender,
                 BirthDate = patient.BirthDate,
                 Active = patient.Active,
-
+                Age = this.ageUtilityMethods.GetAgeString(patient.BirthDate),
                 Email = patient.GetEmail(),
                 MobilePhone = patient.GetMobilePhone(),
                 ResidentialAddress = patient.GetResidentialAddress(),

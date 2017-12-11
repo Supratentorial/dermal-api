@@ -7,6 +7,7 @@ using dermal.api.Data;
 using IdentityServer4.AccessTokenValidation;
 using dermal.api.Interfaces;
 using dermal.api.Services;
+using Microsoft.Extensions.Logging;
 
 namespace dermal.api
 {
@@ -25,7 +26,8 @@ namespace dermal.api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options => {
+            services.AddCors(options =>
+            {
                 options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
 
@@ -37,7 +39,8 @@ namespace dermal.api
             });
 
             services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
-                .AddIdentityServerAuthentication(options => {
+                .AddIdentityServerAuthentication(options =>
+                {
                     options.Authority = Configuration["IdentityServerHost"];
                     options.ApiName = "dermal-api";
                 });
@@ -45,11 +48,15 @@ namespace dermal.api
             services.AddAuthorization(options => { });
 
             services.AddTransient<IPatientMapper, PatientMapper>();
+            services.AddTransient<IAgeUtilityMethods, AgeUtilityMethods>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddConsole();
+            loggerFactory.AddDebug();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

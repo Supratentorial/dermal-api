@@ -51,8 +51,6 @@ public class Patient
         return null;
     }
 
-
-
     public string GetGivenNames()
     {
         if (Name != null)
@@ -78,13 +76,5 @@ public class Patient
             return Name.Prefix;
         }
         return null;
-    }
-
-    public void SetTitle(string title)
-    {
-        if (Name != null)
-        {
-            Name.Prefix = title;
-        }
     }
 }
