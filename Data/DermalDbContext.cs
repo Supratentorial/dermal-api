@@ -13,5 +13,6 @@ namespace dermal.api.Data
         public DbSet<ReferralRequest> ReferralRequests { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Practitioner> Practitioners { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
     }
 }
