@@ -13295,6 +13295,9 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "C:\\dev\\dermal-api\\dermal-api.csproj",
       "projectName": "dermal-api",
@@ -13332,14 +13335,22 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
+            "version": "2.0.0"
           },
           "IdentityServer4.AccessTokenValidation": {
             "target": "Package",
             "version": "2.0.0"
+          },
+          "Serilog.AspNetCore": {
+            "target": "Package",
+            "version": "2.1.0"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "2.0.0",
+            "autoReferenced": true
           },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
@@ -13348,14 +13359,6 @@
           "Microsoft.AspNetCore.Http.Abstractions": {
             "target": "Package",
             "version": "2.0.0"
-          },
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "Serilog.AspNetCore": {
-            "target": "Package",
-            "version": "2.1.0"
           },
           "Serilog.Sinks.Console": {
             "target": "Package",
