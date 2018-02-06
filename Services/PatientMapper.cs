@@ -41,6 +41,7 @@ namespace dermal.api.Services
                 telecom.Add(patientDto.Email);
             }
             patient.Telecom = telecom;
+            patient.Conditions = patientDto.Conditions;
             return patient;
         }
 
@@ -60,7 +61,8 @@ namespace dermal.api.Services
                 Email = patient.GetEmail(),
                 MobilePhone = patient.GetMobilePhone(),
                 ResidentialAddress = patient.GetResidentialAddress(),
-                PostalAddress = patient.GetPostalAddress()
+                PostalAddress = patient.GetPostalAddress(),
+                Conditions = patient.Conditions
             };
             return patientDto;
         }

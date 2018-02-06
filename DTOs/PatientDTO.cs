@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dermal.api.Models;
+using System;
+using System.Collections.Generic;
 
 namespace dermal.api.Dtos
 {
@@ -18,5 +20,6 @@ namespace dermal.api.Dtos
         public Address ResidentialAddress { get; set; }
         public Address PostalAddress { get; set; }
         public Practitioner GeneralPractitioner { get; set; }
+        public List<Condition> Conditions { get; set; }
     }
 }

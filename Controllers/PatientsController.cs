@@ -47,7 +47,12 @@ namespace dermal.api.Controllers
             if (patientId == 0) {
                 return BadRequest();
             }
-            var patient = await this._context.Patients.Include(p => p.Name).Include(p => p.Addresses).Include(p => p.Telecom).SingleOrDefaultAsync(p => p.Id == patientId);
+            var patient = await this._context.Patients
+                .Include(p => p.Name)
+                .Include(p => p.Addresses)
+                .Include(p => p.Telecom)
+                .Include(p => p.Conditions)
+                .SingleOrDefaultAsync(p => p.Id == patientId);
             if (patient == null) {
                 return NotFound();
             }

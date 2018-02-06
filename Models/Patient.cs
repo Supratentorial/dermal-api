@@ -1,3 +1,4 @@
+using dermal.api.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -13,6 +14,7 @@ public class Patient
     public List<Address> Addresses { get; set; }
     public HumanName Name { get; set; }
     public List<ContactPoint> Telecom { get; set; }
+    public List<Condition> Conditions { get; set; }
     public Practitioner GeneralPractitioner { get; set; }
 
     public ContactPoint GetEmail()
